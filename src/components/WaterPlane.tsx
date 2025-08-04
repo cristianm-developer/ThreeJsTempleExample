@@ -25,7 +25,7 @@ function useCreateWater(waterNormals: Texture, maxRipples: number) {
             waterNormals,
             sunDirection: scene.children.find((obj) => obj.type === "DirectionalLight")?.position || undefined,
             distortionScale: .1,
-            alpha: .5,
+            alpha: .9,
             fog: scene.fog !== undefined,
             sunColor: new Color(1, 0, .7)
         });
@@ -219,8 +219,8 @@ function setWavesToShader(waterRef: RefObject<Water>, maxActivesRipples: number)
                     
                     vec3 waveColor = vec3(1.0, 1.0, 1.0);
 
-                    waveIntensity = mix(0.0, 0.1, waveIntensity);
-                    waveIntensity = min(waveIntensity, 0.1);
+                    waveIntensity = mix(0.0, 0.15, waveIntensity);
+                    waveIntensity = min(waveIntensity, 0.15);
 
                     vec3 finalColor = mix(outgoingLight, waveColor, waveIntensity);
 

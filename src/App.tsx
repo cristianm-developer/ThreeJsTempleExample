@@ -34,7 +34,7 @@ function App() {
         dpr={[1, 1.2]}
         frameloop='demand'
         gl= {{
-          antialias: false,
+          antialias: true,
           alpha: true,
           preserveDrawingBuffer: false,
           toneMapping: ACESFilmicToneMapping

@@ -22,24 +22,6 @@ function SceneModel() {
                     if(child.material.name === 'Material'){
                         child.material.color= new Color(1, 1, 1);
                     }
-    
-                    // if(child.name == 'water' ){
-    
-                    //     child.material = baseMaterial;
-                        
-                    //     child.receiveShadow = false;
-               
-                    //     const shadowMesh = child.clone();
-    
-                    //     shadowMesh.material = baseShadownMaterial;
-                    //     shadowMesh.visible = true;
-                    //     shadowMesh.receiveShadow = true;
-                        
-                    //     scene.add(shadowMesh);
-                    // }
-    
-                   
-
       
                 }
             })
