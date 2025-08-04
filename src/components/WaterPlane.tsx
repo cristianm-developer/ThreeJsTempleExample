@@ -18,16 +18,16 @@ function useCreateWater(waterNormals: Texture, maxRipples: number) {
 
     useEffect(() => {
         waterNormals.wrapS = waterNormals.wrapT = RepeatWrapping;
-        const waterGeometry = new PlaneGeometry(80, 80, 128, 128);
+        const waterGeometry = new PlaneGeometry(80, 80);
         const water = new Water(waterGeometry, {
             textureWidth: 2048,
             textureHeight: 2048,
             waterNormals,
             sunDirection: scene.children.find((obj) => obj.type === "DirectionalLight")?.position || undefined,
             distortionScale: .1,
-            alpha: 1,
+            alpha: .5,
             fog: scene.fog !== undefined,
-            sunColor: new Color(1, 0, .5)
+            sunColor: new Color(1, 0, .7)
         });
 
         water.rotation.x = -Math.PI / 2;
@@ -219,8 +219,8 @@ function setWavesToShader(waterRef: RefObject<Water>, maxActivesRipples: number)
                     
                     vec3 waveColor = vec3(1.0, 1.0, 1.0);
 
-                    waveIntensity = mix(0.0, 0.2, waveIntensity);
-                    waveIntensity = min(waveIntensity, 0.2);
+                    waveIntensity = mix(0.0, 0.1, waveIntensity);
+                    waveIntensity = min(waveIntensity, 0.1);
 
                     vec3 finalColor = mix(outgoingLight, waveColor, waveIntensity);
 
