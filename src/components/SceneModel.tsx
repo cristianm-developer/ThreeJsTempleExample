@@ -4,7 +4,7 @@ import { Color, Mesh } from "three";
 
 
 function SceneModel() {
-    const { scene } = useGLTF('/assets/glb/scene.glb');
+    const { scene } = useGLTF(import.meta.env.BASE_URL + 'assets/glb/scene.glb');
 
     useEffect(() => {
         requestAnimationFrame(() => {

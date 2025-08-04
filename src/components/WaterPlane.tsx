@@ -327,7 +327,7 @@ function useUpdateRipplesUniform(waterRef: RefObject<Water>, ripples: RefObject<
 
 export default function WaterPlane() {
 
-    const waterNormals = useLoader(TextureLoader, '/assets/textures/water_normal2.jpg');
+    const waterNormals = useLoader(TextureLoader, import.meta.env.BASE_URL + 'assets/textures/water_normal2.jpg');
     const maxRipples = 50;
     const waterRef = useCreateWater(waterNormals, maxRipples);
     useAnimateWater(waterRef, .005);

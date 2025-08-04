@@ -6,7 +6,7 @@ import { EquirectangularReflectionMapping } from "three";
 
 export default function RotatingEnvironment() {
   const { scene } = useThree();
-  const texture = useLoader(RGBELoader, '/assets/hdri/hdri.hdr');
+  const texture = useLoader(RGBELoader, import.meta.env.BASE_URL + 'assets/hdri/hdri.hdr');
   const rotation = useRef(0);
 
   useEffect(() => {

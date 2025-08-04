@@ -9,7 +9,7 @@ import { degToRad } from "three/src/math/MathUtils.js";
 export function Subject({onHoverStart, onHoverEnd}: {onHoverStart: () => void, onHoverEnd: () => void}){
     const modelRef = useRef<any>(null);
     const {scene, gl} = useThree();
-    const model = useGLTF('/assets/glb/subject.glb');
+    const model = useGLTF(import.meta.env.BASE_URL + 'assets/glb/subject.glb');
 
     const cubeRenderTarget = useRef(
         new WebGLCubeRenderTarget(1024, {
