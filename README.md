@@ -4,6 +4,8 @@ This project is a **React** + **Three.js (via @react-three/fiber)** playground f
 
 The goal is to document and showcase a collection of techniques that can be used to elevate the visual fidelity and interactivity of web-based 3D scenes.
 
+Live Preview: https://cristianm-developer.github.io/ThreeJsTempleExample/
+
 ## ✨ Features and Techniques
 
 - **HDRIs & Environment Cubemaps**  
