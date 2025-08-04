@@ -48,7 +48,7 @@ function App() {
         <h4>The limit is your Imagination</h4>
       </div>
       <footer>
-        <a href='https://github.com/'>Github</a>
+        <a href='https://github.com/cristianm-developer/ThreeJsTempleExample'>Github</a>
       </footer>
    </>
    )
